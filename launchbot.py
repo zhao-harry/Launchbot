@@ -15,7 +15,7 @@ with open("blocks.json", "r") as f:
 with open("mrkdwn.json", "r") as f:
     mrkdwn = json.load(f)
 
-# This function reads a generic plain text block for JSON and returns it with added text
+# This function reads a generic mrkdwn block for JSON and returns it with added text
 def make_launch_block(name, provider, vehicle, pad, location, country, link, time):
     launch_block = copy.deepcopy(mrkdwn)
     text = f"*{name} | {provider} | {vehicle}* \n {pad}, {location}, {country} \n <{link}|{time}>"
